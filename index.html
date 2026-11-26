@@ -8,8 +8,17 @@
 </head>
 <body>
 
-    <h1>Simple Task Manager</h1>
-    <p>Aplikasi pengelola daftar tugas sederhana.</p>
+    <div class="container">
+        <h1>My Tasks</h1>
+        <p>Kelola kegiatan harianmu.</p>
+
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Masukkan tugas...">
+            <button onclick="addTask()">Tambah</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
