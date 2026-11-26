@@ -1,0 +1,1 @@
+console.log("Simple Task Manager berhasil dijalankan!");
