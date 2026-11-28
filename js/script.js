@@ -16,6 +16,27 @@ function addTask() {
     const span = document.createElement("span");
     span.textContent = taskText;
 
+    // Tombol edit
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+
+    editButton.onclick = function () {
+        const updatedTaskText = prompt("Edit tugas:", span.textContent);
+
+        if (updatedTaskText === null) {
+            return;
+        }
+
+        const trimmedTaskText = updatedTaskText.trim();
+
+        if (trimmedTaskText === "") {
+            alert("Tugas tidak boleh kosong!");
+            return;
+        }
+
+        span.textContent = trimmedTaskText;
+    };
+
     // Tombol selesai
     const completeButton = document.createElement("button");
     completeButton.textContent = "Selesai";
@@ -33,6 +54,7 @@ function addTask() {
     };
 
     li.appendChild(span);
+    li.appendChild(editButton);
     li.appendChild(completeButton);
     li.appendChild(deleteButton);
 
